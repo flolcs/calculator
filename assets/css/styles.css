@@ -1,0 +1,189 @@
+/*=============== FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --color1: #081921;
+  --color2: #FFFFFF;
+  --color3: #FC2D2D;
+  --color4: #FEA500;
+  --color5: #0D2836;
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--color2);
+  background-color: var(--color1);
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+}
+
+/*=============== MAIN ===============*/
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60vh;
+  width: 50vw;
+  max-width: 700px;
+  max-height: 700px;
+}
+
+.calculator {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.case {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.case:hover {
+  filter: brightness(120%);
+}
+
+.case:active {
+  border: solid var(--color1) 2px;
+}
+
+.small {
+  background-color: var(--color5);
+}
+
+.large {
+  background-color: var(--color2);
+  color: var(--color1);
+  font-size: 3rem;
+  justify-content: flex-end;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.large:hover{
+  filter: brightness(100%);
+}
+.large:active {
+  border: none;
+}
+
+
+.medium {
+  background-color: var(--color3);
+}
+
+.haute {
+  background-color: var(--color4);
+}
+
+#result {
+  grid-row: 1;
+  grid-column: 1 / 5;
+  width: 100%;
+  height: 100%;
+}
+.division {
+  grid-row: 2;
+  grid-column: 1;
+}
+.multiplication{
+  grid-row: 2;
+  grid-column: 2;
+}
+.soustraction {
+  grid-row: 2;
+  grid-column: 3;
+}
+.addition {
+  grid-row: 2;
+  grid-column: 4;
+}
+.neuf {
+  grid-row: 3;
+  grid-column: 3;
+}
+.huit {
+  grid-row: 3;
+  grid-column: 2;
+}
+.sept {
+  grid-row: 3;
+  grid-column: 1;
+}
+.six {
+  grid-row: 4;
+  grid-column: 3;
+}
+.cinq {
+  grid-row: 4;
+  grid-column: 2;
+}
+.quatre {
+  grid-row: 4;
+  grid-column: 1;
+}
+.trois {
+  grid-row: 5;
+  grid-column: 3;
+}
+.deux {
+  grid-row: 5;
+  grid-column: 2;
+}
+.un {
+  grid-row: 5;
+  grid-column: 1;
+}
+.zero {
+  grid-row: 6;
+  grid-column: 1;
+}
+.virgule {
+  grid-row: 6;
+  grid-column: 2;
+}
+#reset {
+  grid-row: 6;
+  grid-column: 3 / 5;
+  width: 100%;
+  height: 100%;
+}
+#egal {
+  grid-row: 3 / 6;
+  grid-column: 4;
+  width: 100%;
+  height: 100%;
+}
+
+/*=============== RESPONSIVE ===============*/
+
+@media (min-width: 0px) and (max-width: 0px) {
+}
+
